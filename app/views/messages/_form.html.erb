@@ -1,0 +1,11 @@
+<%= form_with model: @message do |f| %>
+    <div class="row">
+        <div class="col-9">
+            <%= f.text_field :content, class: 'form-control', placeholder: 'Digite uma mensagem', autofocus: true, required: true %>
+        </div>
+
+        <div class="col-3">
+            <%= f.submit 'Enviar', class: 'btn btn-primary' %>
+        </div>
+    </div>
+<% end %>
