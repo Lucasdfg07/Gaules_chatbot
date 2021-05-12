@@ -11,7 +11,7 @@ class VerifierService
         MessageVerifier.all.map { |message_verifier| split_verifier_and_compare_to_message(message_verifier, phrase_array)}
 
         if @responses.size == 0
-            "caramba_viu"
+            ["caramba_viu", "ah_cara", "vou_mutar_as_mensagens"].sample
         else
             @responses.first.content
         end
