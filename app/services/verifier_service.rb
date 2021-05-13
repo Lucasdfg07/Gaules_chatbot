@@ -30,6 +30,6 @@ class VerifierService
 
         phrase_array.map {|phrase_word| @count += 1 if message_verifier_array.include?(phrase_word)}
 
-        @responses << message_verifier.responses.first if @count == phrase_array.count
+        @responses << message_verifier.responses.first if @count > 2 || @count == phrase_array.count
     end
 end
