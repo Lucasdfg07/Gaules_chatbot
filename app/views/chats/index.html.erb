@@ -1,4 +1,6 @@
 <div class="offset-md-4 col-md-4 card">
+    <%= render 'chats/modal' %>
+
     <div class="chat p-4 text-center">
         <div class="page-header border-bottom pb-2 p-3">
             <h3>Chatbot da <b>G3X</b> <i class="fa fa-volume-up"></i></h3>
@@ -10,6 +12,17 @@
             <%= image_tag 'gaules', class: 'w-100' %>
         </div>
 
+        <%= button_tag '#', class: 'btn btn-success mb-3 button_modal' do %>
+            Clique para Visualizar Dicas <i class="fa fa-info m-1"></i>
+        <% end %>
+
         <%= render 'messages/form' %>
     </div>
 </div>
+
+<script>
+    $('.tips_modal').hide();
+    $('.button_modal, .close').click(function() {
+        $('.tips_modal').toggle(300);
+    });
+</script>
